@@ -1,3 +1,7 @@
+* {
+    font-family: 'Marvel', sans-serif;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -9,7 +13,6 @@
 }
 
 body {
-    font-family: "Arial", sans-serif;
     background-color: brown;
     background-image: url(./img/Spider-man-4.jfif);
     background-repeat: no-repeat;
@@ -19,22 +22,22 @@ body {
     color: #fff;
 }
 
-    h1 {
-        padding-top: 5%;
-        position: relative;
-        z-index: 1;
-        font-size: 20rem;
-        font-weight: 900;
-        line-height: 1.2;
-        margin: auto 0;
-        margin-bottom: 1rem;
-        color: #c22c2c;
-        -webkit-text-stroke: 2px rgb(243, 241, 255);
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        text-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.9);
-    }
+h1 {
+    padding-top: 5%;
+    position: relative;
+    z-index: 1;
+    font-size: 20rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: auto 0;
+    margin-bottom: 1rem;
+    color: #c22c2c;
+    -webkit-text-stroke: 2px rgb(243, 241, 255);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.9);
+}
 
     h2 {
         padding-bottom: 1%;
@@ -61,35 +64,72 @@ body {
         line-height: 1.5;
     }
 
-#ilustracion {
-    width: 50%;
-    height: 50%;
-    position: relative;
-    padding: auto;
-    margin: 20px auto;
-    z-index: 0;
-    object-fit: cover;
-    object-position: center center;
-    transition: transform 2s ease-in-out;
-}
+    #ilustracion {
+        width: 50%;
+        height: 50%;
+        position: relative;
+        padding: auto;
+        margin: 20px auto;
+        z-index: 0;
+        object-fit: cover;
+        object-position: center center;
+        animation-name: rotate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes rotate {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(360deg);
+        }
+    }
 
-#ilustracion:hover {
-    transform: rotateY(360deg);
-}
-
-.button {
-    margin: 20px auto;
-    display: block;
-    text-decoration: none;
-    background-color: #c20000;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    width: 100px;
-}
+    .button {
+        margin: 20px auto;
+        display: block;
+        text-decoration: none;
+        background-color: #c20000;
+        color: rgb(255, 255, 255);
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        width: 100px;
+        animation-name: breathe;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    
+        /* Agrega el borde luminoso */
+        box-shadow:
+            0 0 5px #ff0000,
+            0 0 10px #ff0000,
+            0 0 20px #ff0000,
+            0 0 25px #ffffff,
+            0 0 25px #ffffff,
+            0 0 25px #c20000,
+            0 0 25px #c20000,
+            inset 0 0 10px #d31f1f,
+            inset -10px -10px 20px rgba(255, 255, 255, 0),
+            inset -20px -20px 30px rgba(255, 255, 255, 0),
+            inset -30px -30px 40px rgba(255, 255, 255, 0),
+            inset -40px -40px 70px rgba(255, 255, 255, 0);
+    
+        /* Agrega la sombra */
+        box-shadow:
+            rgba(0,0,0,.2) -1em .5em .5em,
+            rgba(0,0,0,.2) -.5em .5em .5em,
+            rgba(0,0,0,.2) .5em .5em .5em,
+            rgba(0,0,0,.2) .5em -.5em .5em,
+            rgba(0,0,0,.2) .5em -.5em -.5em,
+            rgba(0,0,0,.2) .5em .5em -.5em,
+            rgba(0,0,0,.2) -.5em -.5em -.5em,
+            rgba(0,0,0,.2) -.5em -.5em .5em;
+    }
 
 .button:hover {
     background-color: #ff0000;
