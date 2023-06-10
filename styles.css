@@ -1,7 +1,9 @@
+/* General styles */
 * {
     font-family: 'Marvel', sans-serif;
 }
 
+/* Overlay styles */
 .overlay {
     position: fixed;
     top: 0;
@@ -9,25 +11,28 @@
     width: 100%;
     height: 100%;
     background-color: rgba(65, 65, 65, 0.8);
-    /* Color de fondo de la capa con opacidad */
     mask-repeat: repeat;
 }
 
+/* Body styles */
 body {
     background-color: brown;
     background-image: url(./img/Spider-man-4.jfif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    /* Centra la imagen de fondo */
     position: relative;
     color: #fff;
 }
 
-h1 {
+/* Estilos del encabezado */
+.header {
     padding-top: 5%;
     position: relative;
     z-index: 1;
+}
+
+.header__title {
     font-size: 20rem;
     font-weight: 900;
     line-height: 1.2;
@@ -41,10 +46,19 @@ h1 {
     text-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.9);
 }
 
-h2 {
-    padding-bottom: 1%;
+/* Main styles */
+.main {
     position: relative;
     z-index: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.main__section {
+    margin-bottom: 2rem;
+}
+
+.main__title {
     font-size: 2rem;
     font-weight: 900;
     line-height: 1.2;
@@ -57,7 +71,7 @@ h2 {
     -webkit-text-stroke: 0.1px rgb(0, 0, 0);
 }
 
-p {
+.main__description {
     padding: 10px;
     margin: 0 auto;
     width: 80%;
@@ -66,7 +80,7 @@ p {
     line-height: 1.5;
 }
 
-#ilustration {
+.main__image {
     width: 50%;
     height: 50%;
     position: relative;
@@ -89,7 +103,8 @@ p {
     }
 }
 
-.button {
+/* Button styles */
+.main__button {
     margin: 20px auto;
     display: block;
     text-decoration: none;
@@ -100,8 +115,6 @@ p {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     width: 100px;
-
-    /* Borde luminoso */
     box-shadow:
         0 0 10px #ff0000,
         0 0 10px #ff0000,
@@ -117,7 +130,11 @@ p {
         inset -40px -40px 70px rgba(255, 255, 255, 0);
 }
 
-.button:hover {
+.main__button-text {
+    font-size: 18px;
+}
+
+.main__button:hover {
     background-color: #ff0000;
     text-shadow:
         0 0 5px #ff0000,
@@ -132,7 +149,7 @@ p {
         inset -40px -40px 70px rgba(255, 255, 255, 0);
 }
 
-.button:focus {
+.main__button:focus {
     background-color: #ff0000;
     text-shadow:
         0 0 5px #ff0000,
@@ -147,7 +164,7 @@ p {
         inset -40px -40px 70px rgba(255, 255, 255, 0);
 }
 
-.button:active {
+.main__button:active {
     background-color: #000000;
     text-shadow:
         0 0 5px #ff0000,
@@ -160,53 +177,47 @@ p {
         inset -20px -20px 30px rgba(255, 255, 255, 0),
         inset -30px -30px 40px rgba(255, 255, 255, 0),
         inset -40px -40px 70px rgba(255, 255, 255, 0);
-} 
+}
 
-main {
+/* Footer styles */
+.footer {
     position: relative;
     z-index: 1;
     padding: 2rem;
     text-align: center;
 }
 
-footer {
-    position: relative;
-    z-index: 1;
-    padding: 2rem;
-    text-align: center;
+/* Small media queries */
+@media (max-width: 767px) {
+    .header__title {
+        font-size: 2rem;
+    }
+
+    .main__description {
+        font-size: 14px;
+    }
+
+    .main__button {
+        font-size: 12px;
+    }
+
+    .main,
+    .footer {
+        padding: 1rem;
+    }
 }
 
-/* Media queries para pantallas más pequeñas */
-    @media (max-width: 767px) {
-        h1 {
-            font-size: 2rem;
-        }
-
-        p {
-            font-size: 14px;
-        }
-
-        .button {
-            font-size: 12px;
-        }
-
-        main,
-        footer {
-            padding: 1rem;
-        }
+/* Large media queries */
+@media (min-width: 768px) {
+    .header__title {
+        font-size: 4rem;
     }
 
-    /* Media queries para pantallas más grandes */
-    @media (min-width: 768px) {
-        h1 {
-            font-size: 4rem;
-        }
-
-        p {
-            font-size: 16px;
-        }
-
-        .button {
-            font-size: 18px;
-        }
+    .main__description {
+        font-size: 16px;
     }
+
+    .main__button {
+        font-size: 18px;
+    }
+}
