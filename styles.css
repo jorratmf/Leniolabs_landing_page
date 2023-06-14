@@ -93,6 +93,32 @@ body {
     animation-iteration-count: infinite;
 }
 
+/* Estilos para la lista de personajes filtrados de X-Men */
+.character-list--xmen {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.character-list--xmen li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para la lista de personajes comunes a Avengers y X-Men */
+.character-list--common {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.character-list--common li {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ff0000; /* Color rojo para resaltar los personajes comunes */
+}
+
+
 @keyframes rotate {
     from {
         transform: rotateY(0deg);
